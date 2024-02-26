@@ -15,6 +15,7 @@ export class ExpenseService {
   getAllExpenses(): Observable<Expense[]> {
     return this.http.get<Expense[]>(this.apiUrl);
   }
+  
 
   getExpenseById(id: number): Observable<Expense> {
     return this.http.get<Expense>(`${this.apiUrl}/${id}`);

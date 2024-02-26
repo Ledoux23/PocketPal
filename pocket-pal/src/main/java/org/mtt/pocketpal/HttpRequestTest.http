@@ -1,0 +1,7 @@
+###Créer une nouvelle dépense (POST)
+GET http://localhost:8090/expenses
+Content-Type: application/json
+
+
+
+
