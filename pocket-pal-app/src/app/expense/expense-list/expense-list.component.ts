@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ExpenseService } from '../expense.service';
+import { ExpenseService } from '../../services/expense.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class ExpenseListComponent implements OnInit  {
 
-  public title = 'To-do-list';
+  public title = 'Gestion des dépenses personnelles';
   public expenses: any[] = [];
 
   constructor(

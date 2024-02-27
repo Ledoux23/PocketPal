@@ -1,24 +1,28 @@
 <div class="container">
+
     <h2 class="mb-3" *ngIf="expenses && expenses.length > 0">{{ title }}</h2>
 
-    <div class="d-flex flex-wrap justify-content-between">
-        <div class="row row-cols-1 row-cols-md-3">
-            <div class="col mb-4" *ngFor="let expense of expenses; let i = index">
-                <ul class="list-group">
-                    <li>
-                        <a [routerLink]="['/expenses', expense.id]" style="text-decoration: none;">
-                            <h4 class="card-title">{{ expense.description }}</h4> <!-- Utilisation de la propriété 'description' -->
-                        </a>
-                    </li>
-                    <li>
-                        <p>Amount: {{ expense.amount }}</p> <!-- Affichage de la propriété 'amount' -->
-                    </li>
-                    <li>
-                        <p>Date: {{ expense.date }}</p> <!-- Affichage de la propriété 'date' -->
-                    </li>
-                </ul>
+    <div class="row">
+        
+        <div class="col-sm-6 mb-3" *ngFor="let expense of expenses; let i = index">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">{{ expense.description }}</div>
+                    <div class="card-text">{{ expense.amount }}</div>
+                    <div class="card-title">Détails :</div>
+                    <ul class="list-group list-group-flush">            
+                        <li class="list-group-item">An item</li>
+                        <li class="list-group-item">A second item</li>
+                        <li class="list-group-item">A third item</li>
+                    </ul>
+                </div>        
+                <div class="card-body">
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
             </div>
         </div>
+
     </div>
 </div>
-<!-- <router-outlet></router-outlet> -->

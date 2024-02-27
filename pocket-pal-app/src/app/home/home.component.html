@@ -1,5 +1,6 @@
 <div class="container">
 
+  <!-- header -->
   <div class="card-header">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
@@ -41,45 +42,35 @@
 
   <hr>
 
+   <!-- body -->
   <div class="row">
-    <div class="col-sm-6 mb-3">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
     <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
+      <div class="mb-3" *ngFor="let expense of expenses; let i = index">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col">{{ expense.description }}</div>
+              <div class="col">{{ expense.amount }}</div>
+              <div class="col">{{ expense.date }}</div>
+            </div>
+            <!--<a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>      
       </div>
-    </div>
-    <div class="col-sm-6 mb-3">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
+      <div class="mb-3">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col"><strong>Total Amount</strong></div>
+              <div class="col"><strong>{{ totalAmount }}</strong></div>
+            </div>
+          </div>
+        </div>        
       </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6 mb-3 mb-sm-0">
-      <div class="card">
+      <!--<div class="mb-3">
+        <canvas id="myChart" width="400" height="400"></canvas>       
+      </div>-->
+      <div class="mb-3">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -95,7 +86,22 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-6">
+
+    <div class="col-sm-6"> 
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
@@ -116,8 +122,10 @@
 
   <hr> 
 
+   <!-- footer -->
   <div class="card-footer text-body-secondary">
     2 days ago
   </div>
 
 </div>
+
