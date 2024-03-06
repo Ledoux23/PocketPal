@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -31,6 +33,10 @@ public class ExpenseController {
 
     @PostMapping
     public Expense createExpense(@RequestBody Expense expense) {
+        // Initialiser la date à la date actuelle
+        expense.setDate(LocalDate.now());
+        // Initialiser l'heure à l'heure actuelle
+        expense.setTime(LocalTime.now());
         return expenseService.createExpense(expense);
     }
 

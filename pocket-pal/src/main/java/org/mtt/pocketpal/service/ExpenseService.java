@@ -37,6 +37,7 @@ public class ExpenseService {
                     existingExpense.setDescription(expense.getDescription());
                     existingExpense.setAmount(expense.getAmount());
                     existingExpense.setDate(expense.getDate());
+                    existingExpense.setTime(expense.getTime());
                     // Enregistrer la dépense mise à jour dans la base de données
                     return expenseRepository.save(existingExpense);
                 })
